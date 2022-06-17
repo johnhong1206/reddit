@@ -1,4 +1,5 @@
-import type { NextPage } from 'next'
+import type { NextPage, GetServerSideProps } from 'next'
+
 import Head from 'next/head'
 import Feed from '../components/Feed'
 import PostBox from '../components/PostBox'
@@ -51,3 +52,13 @@ const Home: NextPage = () => {
 }
 
 export default Home
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
+
+  return {
+    props: {},
+  }
+}
