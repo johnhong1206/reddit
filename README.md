@@ -1,4 +1,4 @@
-# This is Reddit clone
+## Reddit clone
 The webpage is built by NextJs, Tailwind CSS, TypeScript, SupaBase, Stepzen, GraphQL, PostgreSQL
 
 ## Main Function
